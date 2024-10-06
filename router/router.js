@@ -19,6 +19,8 @@ router.route('/result')
         .delete(frontEndController.dropResult)
 
 router.route('/backend').post(backEndController.insertQuestions)
+                        .get(backEndController.getQuestions)
 router.route('/product').post(productDesignController.insertQuestions)
+                        .get(productDesignController.getQuestions)
 
 export default router;

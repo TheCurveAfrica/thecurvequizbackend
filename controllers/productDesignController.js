@@ -11,3 +11,12 @@ export async function insertQuestions(req, res){
         res.json({ error })
     }
 }
+
+export async function getQuestions(req, res){
+    try {
+        const q = await productDesignQuestions.find();
+        res.json(q)
+    } catch (error) {
+        res.json({ error })
+    }
+}
